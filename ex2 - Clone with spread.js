@@ -14,8 +14,11 @@
 let originalArray = [1, 2, 3, 4, 5];
 
 function updateArray(array, index, newValue) {
-  array[index] = newValue;
-  return array;
+  let cloneArray = [...array];
+  cloneArray[index] = newValue;
+  return cloneArray;
+  // array[index] = newValue;
+  // return array;
 }
 
 let updatedArray = updateArray(originalArray, 2, 10);
